@@ -1,0 +1,21 @@
+type Query {
+  noop: Boolean
+}
+
+input PingPongInput {
+  color: String
+  click: Int
+}
+
+type PingPong {
+  color: String
+  click: Int
+}
+
+type Mutation {
+  ping(pingPong: PingPongInput): PingPong
+}
+
+type Subscription {
+  pong: PingPong
+}
